@@ -53,3 +53,10 @@ let colores = ["lightblue", "red", "yellow"];
 for (let i = 0; i < div.length; i++) {
     div[i].style.backgroundColor = colores[i];
 }
+
+// 9.	Crear un nuevo elemento <p> con texto “Elemento insertado con JS” y agrégalo al final del body
+
+const nuevoP = document.createElement("p");
+nuevoP.textContent = "Elemento insertado con JS";
+
+document.body.appendChild(nuevoP);
