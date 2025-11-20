@@ -3,3 +3,12 @@
 const elemento = document.getElementsByTagName("h2")[0];
 
 console.log("Elemento seleccionado: ", elemento.textContent);
+
+// 4.	Cambiar el contenido de todos los párrafos <p> para que diga: “Texto actualizado dinámicamente”
+
+let parrafos = document.getElementsByTagName("p");
+let nuevoTexto = "Texto actualizado dinámicamente";
+
+for (let i = 0; i < parrafos.length; i++) {
+    parrafos[i].textContent = nuevoTexto;
+}
