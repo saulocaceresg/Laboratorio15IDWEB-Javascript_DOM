@@ -60,3 +60,10 @@ const nuevoP = document.createElement("p");
 nuevoP.textContent = "Elemento insertado con JS";
 
 document.body.appendChild(nuevoP);
+
+// 10.	Crear un nuevo <h3> y colócalo antes del primer <p> existente del documento
+
+const nuevoH3 = document.createElement("h3");
+nuevoH3.textContent = "Nuevo elemento h3";
+
+document.querySelector("p").before(nuevoH3);
