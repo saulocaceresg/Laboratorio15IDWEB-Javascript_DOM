@@ -67,3 +67,16 @@ const nuevoH3 = document.createElement("h3");
 nuevoH3.textContent = "Nuevo elemento h3";
 
 document.querySelector("p").before(nuevoH3);
+
+// 11.	Crear un <ul> y agrega 5 <li> con los textos “Elemento 1”, “Elemento 2”, …, “Elemento 5”. Inserta la lista dentro de un <section> existente
+
+const nuevoUl = document.createElement("ul");
+
+for (let i = 0; i < 5; i++) {
+    let li = document.createElement("li");
+    li.textContent = "Elemento " + (i + 1);
+    nuevoUl.appendChild(li);
+}
+
+let section = document.getElementById("listaNueva-Ej9");
+document.querySelector("section").appendChild(nuevoUl);
