@@ -34,3 +34,12 @@ for (let i = 0; i < elementosLi.length; i++) {
         li.classList.remove("oculto");
     }
 }
+
+// 7.	Seleccionar un <ul> por su id y muestra en consola el texto de cada hijo <li> usando un bucle for...of
+
+console.log("Ejercicio 5 (7.)");
+const ul = document.getElementById("lista-Ej5");
+
+for (let i of ul.children) {
+    console.log(i.textContent);
+}
