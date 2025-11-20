@@ -12,3 +12,13 @@ let nuevoTexto = "Texto actualizado dinámicamente";
 for (let i = 0; i < parrafos.length; i++) {
     parrafos[i].textContent = nuevoTexto;
 }
+
+// 5.	Seleccionar la primera imagen del documento y cambia sus atributos src y alt
+
+const imagenes = document.getElementById("imagenes");
+let primerImg = imagenes.firstElementChild;
+
+console.log("Primera imagen: ", primerImg);
+
+primerImg.setAttribute("src", "recursos/imagen4.jpg");
+primerImg.setAttribute("alt", "Altas Voluntades");
