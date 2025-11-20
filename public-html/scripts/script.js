@@ -43,3 +43,13 @@ const ul = document.getElementById("lista-Ej5");
 for (let i of ul.children) {
     console.log(i.textContent);
 }
+
+// 8.	Para cada <div> del documento, cambiar su color de fondo a un color diferente (por ejemplo, usando un array de colores)
+
+console.log("Ejercicio 6 (8.)");
+const div = document.getElementsByTagName("div");
+let colores = ["lightblue", "red", "yellow"];
+
+for (let i = 0; i < div.length; i++) {
+    div[i].style.backgroundColor = colores[i];
+}
