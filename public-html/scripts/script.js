@@ -22,3 +22,15 @@ console.log("Primera imagen: ", primerImg);
 
 primerImg.setAttribute("src", "recursos/imagen4.jpg");
 primerImg.setAttribute("alt", "Altas Voluntades");
+
+// 6.	Agregar la clase "resaltado" a todos los elementos <li> y elimina la clase "oculto" si la tienen
+
+const elementosLi = document.getElementsByTagName("li");
+
+for (let i = 0; i < elementosLi.length; i++) {
+    let li = elementosLi[i];
+    li.classList.add("resaltado");
+    if (li.getElementsByClassName("oculto")) {
+        li.classList.remove("oculto");
+    }
+}
