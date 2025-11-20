@@ -80,3 +80,9 @@ for (let i = 0; i < 5; i++) {
 
 let section = document.getElementById("listaNueva-Ej9");
 document.querySelector("section").appendChild(nuevoUl);
+
+// 12.	Seleccionar un párrafo y reemplázalo por un nuevo elemento <div> con texto “Párrafo reemplazado”
+
+const Pselect = document.getElementById("Pseleccionado");
+
+Pselect.outerHTML = "<div>Párrafo reemplazado</div>";
