@@ -86,3 +86,11 @@ document.querySelector("section").appendChild(nuevoUl);
 const Pselect = document.getElementById("Pseleccionado");
 
 Pselect.outerHTML = "<div>Párrafo reemplazado</div>";
+
+// 13.	Seleccionar el último elemento <p> y elimínalo del DOM
+
+console.log("Ejercicio 11 (10.)");
+const elementosP = document.getElementsByTagName("p");
+let ultimoP = elementosP[elementosP.length - 1];
+console.log("Último elemento <p>: ", ultimoP);
+ultimoP.remove();
