@@ -153,3 +153,15 @@ const sections = document.getElementsByTagName("section");
 for (let i = 0; i < sections.length; i++) {
     sections[i].setAttribute("data-index", i);
 }
+
+// 19.	Contar cuántos nodos <div> hay en el documento y muestra el resultado en un nuevo <p> creado dinámicamente
+
+console.log("Ejercicio 17 (19.)\nCantidad de nodos div");
+
+const contDiv = document.getElementsByTagName("div").length;
+console.log("Cantidad de elementos div: ", contDiv);
+
+let pMostrarCont = document.createElement("p");
+pMostrarCont.textContent = "Cantidad de nodos div en el documento: " + contDiv;
+
+document.body.appendChild(pMostrarCont);
