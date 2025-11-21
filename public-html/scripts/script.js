@@ -109,3 +109,16 @@ console.log("Ejercicio 13 (15.)\nClonando y agregando el primer article de un ma
 let primerArticle = document.getElementsByTagName("article")[0];
 let clonPrimerArticle = primerArticle.cloneNode("true");
 document.querySelector("main").appendChild(clonPrimerArticle);
+
+// 16.	Seleccionar el primer <ul> y mueve su último <li> al principio de la lista
+
+console.log("Ejercicio 14 (16.)")
+let listaUlprimera = document.getElementsByTagName("ul")[0];
+
+console.log("ul primero:", listaUlprimera);
+
+let ultimoLi = listaUlprimera.lastElementChild;
+
+console.log("Último <li> de la lista:", ultimoLi);
+
+listaUlprimera.firstElementChild.before(ultimoLi);
