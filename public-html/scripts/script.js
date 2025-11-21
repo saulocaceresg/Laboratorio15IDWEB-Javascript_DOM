@@ -10,7 +10,7 @@ let parrafos = document.getElementsByTagName("p");
 let nuevoTexto = "Texto actualizado dinámicamente";
 
 for (let i = 0; i < parrafos.length; i++) {
-    parrafos[i].textContent = nuevoTexto;
+    // parrafos[i].textContent = nuevoTexto;
 }
 
 // 5.	Seleccionar la primera imagen del documento y cambia sus atributos src y alt
@@ -122,3 +122,24 @@ let ultimoLi = listaUlprimera.lastElementChild;
 console.log("Último <li> de la lista:", ultimoLi);
 
 listaUlprimera.firstElementChild.before(ultimoLi);
+
+// 17.	Tomar todos los <p> dentro de un contenedor y reordénalos alfabéticamente según su texto.
+// (Tip: usa Array.from(), sort() y appendChild())
+
+console.log("Ejercicio 15 (17.)")
+
+const divP = document.getElementById("divP");
+let arrayP = Array.from(divP.querySelectorAll("p"));
+
+console.log(arrayP);
+let ordenado = arrayP.sort((a, b) =>
+    a.textContent.localeCompare(b.textContent)
+);
+
+console.log(ordenado);
+
+for (const i of ordenado) {
+    console.log(i);
+}
+
+ordenado.forEach(p => divP.appendChild(p));
