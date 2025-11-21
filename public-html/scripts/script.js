@@ -102,3 +102,10 @@ console.log("Ejercicio 12 (14.)");
 const divContenido = document.getElementById("contenido");
 
 divContenido.innerHTML = "";
+
+// 15.	Clonar el primer <article> del documento y agrégalo al final del <main>
+
+console.log("Ejercicio 13 (15.)\nClonando y agregando el primer article de un main");
+let primerArticle = document.getElementsByTagName("article")[0];
+let clonPrimerArticle = primerArticle.cloneNode("true");
+document.querySelector("main").appendChild(clonPrimerArticle);
