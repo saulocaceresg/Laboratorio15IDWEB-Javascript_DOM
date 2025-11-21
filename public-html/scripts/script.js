@@ -199,3 +199,33 @@ document.body.querySelector("#ej19").appendChild(nuevoDiv);
 
 let parrafosDiv = nuevoDiv.querySelectorAll("p");
 parrafosDiv[1].remove();
+
+// 22.	Dentro de un <section>, crear un <h2> con texto “Título nuevo”, agregar debajo un <p> con texto “Descripción generada”, agregar una lista <ul> con 3 ítems y finalmente, eliminar el <h2> original de esa sección (si existía)
+
+console.log("Ejercicio 20 (22.)\n");
+
+let nuevoSection = document.createElement("section");
+
+let elementoH2 = document.createElement("h2");
+elementoH2.textContent = "Título nuevo";
+
+let elementoP = document.createElement("p");
+elementoP.textContent = "Descripción generada";
+
+let listaUl = document.createElement("ul");
+
+for (let i = 1; i <= 3; i++) {
+    let li = document.createElement("li");
+    li.textContent = i + "° Elemento de lista ";
+    
+    listaUl.appendChild(li);
+}
+
+document.querySelector("#ej20").appendChild(nuevoSection);
+
+nuevoSection.appendChild(elementoH2);
+nuevoSection.appendChild(elementoP);
+nuevoSection.appendChild(listaUl);
+
+let h2Original = document.querySelector("#ej20").getElementsByTagName("h2")[0];
+h2Original.remove();
