@@ -165,3 +165,20 @@ let pMostrarCont = document.createElement("p");
 pMostrarCont.textContent = "Cantidad de nodos div en el documento: " + contDiv;
 
 document.body.appendChild(pMostrarCont);
+
+// 20.	Crear dinámicamente un elemento <ul> que contenga dentro varios <li>, y dentro de cada <li> un <span> con texto “Nivel interno”
+
+console.log("Ejercicio 18 (20.)\nCreando ul, li y span");
+
+let elementoUl = document.createElement("ul");
+
+for (let i = 0; i < 4; i++) {
+    let li = document.createElement("li");
+    let span = document.createElement("span");
+    span.textContent = "Nivel interno";
+
+    li.appendChild(span);
+    elementoUl.appendChild(li);
+}
+
+document.body.appendChild(elementoUl);
