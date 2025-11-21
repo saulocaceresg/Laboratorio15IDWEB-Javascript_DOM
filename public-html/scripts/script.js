@@ -182,3 +182,20 @@ for (let i = 0; i < 4; i++) {
 }
 
 document.body.appendChild(elementoUl);
+
+// 21.	Crear 3 nuevos párrafos dentro de un div con id "contenedor". Luego elimina el segundo párrafo
+
+console.log("Ejercicio 19 (21.)\nCreando párrafos y eliminando");
+
+const nuevoDiv = document.createElement("div");
+
+for (let i = 0; i < 3; i++) {
+    let p = document.createElement("p");
+    p.textContent = "Párrafo " + (i + 1) + " dentro de div - Ej21"
+
+    nuevoDiv.appendChild(p);
+}
+document.body.querySelector("#ej19").appendChild(nuevoDiv);
+
+let parrafosDiv = nuevoDiv.querySelectorAll("p");
+parrafosDiv[1].remove();
