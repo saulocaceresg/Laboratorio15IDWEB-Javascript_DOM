@@ -143,3 +143,13 @@ for (const i of ordenado) {
 }
 
 ordenado.forEach(p => divP.appendChild(p));
+
+// 18.	A cada <section> del documento, agregar un atributo data-index con el número de posición de la sección
+
+console.log("Ejercicio 16 (18.)\nAgregando un data-index");
+
+const sections = document.getElementsByTagName("section");
+
+for (let i = 0; i < sections.length; i++) {
+    sections[i].setAttribute("data-index", i);
+}
